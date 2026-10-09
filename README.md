@@ -28,6 +28,8 @@ The UI text is in Indonesian because that is what the Figma design uses. This RE
 
 ## What you need
 
+New to this stack, or something is not working? There is a longer step-by-step guide with a troubleshooting list in [docs/SETUP.md](docs/SETUP.md). The short version is below.
+
 PHP 8.3+ with Composer, MySQL 8, and Node 20+.
 
 On Windows, [Laragon](https://laragon.org) gives you PHP, Composer and MySQL in one install. After installing it, make sure `php` and `composer` work in a new terminal. If not, add the Laragon PHP and Composer folders to your PATH.
