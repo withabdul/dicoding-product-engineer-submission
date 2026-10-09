@@ -4,6 +4,21 @@ A step-by-step version of the setup in the [README](../README.md), with the plac
 
 It takes about 10 minutes if PHP, MySQL and Node are already installed.
 
+## The quick way
+
+Install the tools in step 1 and start MySQL. Then, from the repo root:
+
+```bash
+./setup.sh          # macOS, Linux, Git Bash
+.\setup.ps1         # Windows PowerShell
+```
+
+It runs steps 3 and 4 for you: `composer install`, creates the `.env` files, creates the `dicoding_jobs` database (if the `mysql` command is available), migrates and seeds the demo data, and runs `npm install`. It keeps your existing `.env` and app key, and seeding twice does not duplicate the demo data, so you can run it again whenever.
+
+It does **not** start the servers. Start them yourself (steps 3 and 4 end with the commands). If it stops with an error, the message says what is missing, and the troubleshooting list at the bottom of this page covers the common ones.
+
+The rest of this page is the same thing done by hand.
+
 ## 1. Install what you need
 
 | Tool | Version | Check with |
