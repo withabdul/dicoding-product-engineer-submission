@@ -11,6 +11,11 @@ class DatabaseSeeder extends Seeder
     /** Demo data; the Playwright E2E suite depends on these titles. */
     public function run(): void
     {
+        // Safe to run twice: the setup scripts call this on every run.
+        if (User::where('email', 'recruiter@example.com')->exists()) {
+            return;
+        }
+
         $recruiter = User::factory()->create([
             'name' => 'Dicoding Recruiter',
             'email' => 'recruiter@example.com',
