@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+/* Design tokens from the Figma file (Inter, zinc-based palette). */
+@theme inline {
+  --color-ink: #18181b;
+  --color-brand: #2d3e50;
+  --color-accent: #3b82f6;
+  --color-accent-soft: #eff6ff;
+  --color-accent-line: #60a5fa;
+  --color-line: #e4e4e7;
+  --color-muted: #52525b;
+  --color-subtle: #71717a;
+  --color-text2: #3f3f46;
+  --color-fill: #f4f4f5;
+  --color-surface: #fafafa;
+  --color-required: #e11d48;
+  --color-danger: #be123c;
+  --color-danger-soft: #fecdd3;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+}
+
+/* Text styles (size / line height / letter spacing) from the Figma tokens. */
+@utility text-xs12 { font-size: 12px; line-height: 17px; }
+@utility text-small { font-size: 14px; line-height: 20px; letter-spacing: -0.084px; }
+@utility text-body { font-size: 16px; line-height: 22px; letter-spacing: -0.176px; }
+@utility heading-h6 { font-size: 16px; line-height: 22px; letter-spacing: -0.176px; font-weight: 600; }
+@utility heading-h5 { font-size: 20px; line-height: 28px; letter-spacing: -0.34px; font-weight: 600; }
+@utility heading-h4 { font-size: 24px; line-height: 34px; letter-spacing: -0.456px; font-weight: 600; }
+
+body {
+  background: #fff;
+  color: #18181b;
+  font-family: var(--font-sans);
+}
+
+/* Rich text on the detail page (16/22). */
+.rich { font-size: 16px; line-height: 22px; letter-spacing: -0.176px; }
+.rich h2 { font-size: 20px; line-height: 28px; letter-spacing: -0.34px; font-weight: 600; margin: 32px 0 8px; }
+.rich > :first-child { margin-top: 0; }
+.rich p { margin: 0 0 22px; }
+.rich > p:last-child, .rich li > p { margin-bottom: 0; }
+.rich ul { list-style: disc; padding-left: 24px; margin: 0; }
+.rich ol { list-style: decimal; padding-left: 24px; margin: 0; }
+.rich a { text-decoration: underline; }
+.rich img { max-width: 100%; }
+.rich code, .rich pre { background: #f4f4f5; border-radius: 4px; padding: 0 4px; }
+
+/* Rich text inside the editor (14/20, smaller than the detail page). */
+.editor { font-size: 14px; line-height: 20px; letter-spacing: -0.084px; }
+.editor h2 { font-size: 20px; line-height: 28px; letter-spacing: -0.34px; font-weight: 600; margin: 24px 0 8px; }
+.editor > :first-child { margin-top: 0; }
+.editor p { margin: 0 0 12px; }
+.editor ul { list-style: disc; padding-left: 21px; }
+.editor ol { list-style: decimal; padding-left: 21px; }
+.editor a { text-decoration: underline; }
+.editor img { max-width: 100%; }
+.editor code, .editor pre { background: #f4f4f5; border-radius: 4px; padding: 0 4px; }
